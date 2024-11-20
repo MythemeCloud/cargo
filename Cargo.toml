@@ -17,6 +17,7 @@ rayon = "1.10.0"
 rusqlite = { version = "0.32.1", features = ["bundled"] }
 serde = { version = "1.0.215", features = ["derive"] }
 serde_json = "1.0.133"
+unbug = { version = "0.2.0", features = ["enable"] }
 
 [lib]
 name = "mt"
@@ -29,3 +30,7 @@ path = "Source/Binary/mt.rs"
 [[bin]]
 name = "mytheme"
 path = "Source/Binary/mytheme.rs"
+
+[features]
+default = []
+Debug = ["unbug/enable"]
