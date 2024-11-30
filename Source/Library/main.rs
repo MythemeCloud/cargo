@@ -26,6 +26,7 @@ fn parse_query(query:&str) -> (&str, String) {
 
 fn generate_types(query:&str, sql:String) {
 	println!("Query: {}", query);
+
 	println!("SQL: {}", sql);
 }
 
@@ -53,6 +54,7 @@ pub fn run() {
 		.get_matches();
 
 	let parallel = matches.get_flag("parallel");
+
 	let file = matches.get_one::<String>("file").unwrap();
 
 	let prql = std::fs::read_to_string(file).unwrap();
