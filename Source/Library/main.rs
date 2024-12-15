@@ -4,7 +4,7 @@ extern crate rayon;
 extern crate rusqlite;
 
 use clap::{Arg, ArgAction, Command as ClapCommand};
-use prql_compiler::{compile, sql::Dialect, Options, Target};
+use prql_compiler::{Options, Target, compile, sql::Dialect};
 use rayon::prelude::*;
 
 fn parse_query(query:&str) -> (&str, String) {
